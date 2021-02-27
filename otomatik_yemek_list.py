@@ -21,7 +21,7 @@ def otomatik(secimin,i):
     if secimin == "E" or secimin == "e" :
             x = str(input("Senin yerine ben seçebilir miyim? E/H"))
             if x == "E" or x == "e" :
-                y = random.randint(1,len(secilmis)+1)
+                y = random.randint(1,len(secilmis))
                 print(secilmis[y])
             else:
                 print(secilmis)
