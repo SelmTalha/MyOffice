@@ -1,4 +1,4 @@
-import random,time
+import random,time,sys
 
 
 corba = ["Çorba","Domates Çorbası", "Mercimek Çorbası", "Düğün Çorbası", "Yayla Çorbası", "Tarhana Çorbası", "Ezogelin Çorbası", "Tavuklu Şehriye Çorbası", "Bal kabağı çorbası",
@@ -17,7 +17,7 @@ def listeden_soru_cek():
         otomatik(secimin,i)
 
 def otomatik(secimin,i):
-    secilmis=i[0:]
+    secilmis=i[1:]
     if secimin == "E" or secimin == "e" :
             x = str(input("Senin yerine ben seçebilir miyim? E/H"))
             if x == "E" or x == "e" :
@@ -26,7 +26,11 @@ def otomatik(secimin,i):
             else:
                 print(secilmis)
     elif secimin == "H" or secimin =="h":
-            pass
+        pass
+    elif secimin =="x" or secimin=="X" or secimin=="Q" or secimin=="q":
+        print("Çıkış yapılıyor..")
+        time.sleep(1)
+        sys.exit()
     else:
         print("Geçersiz değer girdiniz.")
         
@@ -39,5 +43,5 @@ while True:
         listeden_soru_cek()
     elif secim==2:
         print("Çıkış yapılıyor..")
-        time.sleep(2)
+        time.sleep(1)
         break
